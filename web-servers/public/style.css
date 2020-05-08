@@ -11,9 +11,9 @@ body{
     min-height: 100vh
 }
 
-.main-content {
+/* .main-content {
     flex-grow: 1;
-}
+} */
 img{
     width: 250px;
 }

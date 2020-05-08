@@ -4,28 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <link rel="stylesheet" href="style.css">
+    {{!-- <link rel="stylesheet" href="style.css"> --}}
+    <link rel="stylesheet" href="style_new.css">
     
     <link rel="icon" href="https://lh3.googleusercontent.com/proxy/Iuh43yKkB5cryTTeDmvkF4kiDY2e7YLjxwS-ki0Phg0ysQ3fq784o6xMds8cYGiQRN5f_uJKTDE4z1gBFZaJPt9fZpzhWN0X6pj0M1ycQGZVKcUZ6XZ7bUAnH6_Ik3UfhBHFOI9m1HkZyZON4A">
 </head>
 <body>
-    <div class="main-content">
+    <div id="header">
+        <div class="overview">
+            <h3>theWeather</h3>
+            <div class="weather_overview">
+                <h1 id="message-1"></h1>
+                <h3 id="message-2"></h3>
+                <img src="" alt="" id="image" width="50px" height="50px">
+
+                {{!-- <br><span>9:00am-Thursday, 7 May, 2020</span> --}}
+
+                {{!-- <p id="message-2"></p> --}}
+                
+            </div>
+        </div>
+        <div class="details">
+                <div class="search_bar">
+                    <form action="" onsubmit="hello()">
+                        <input type="text" placeholder="Location">
+                        <button>Search</button>
+                    </form>
+                </div>
+                <div class="weather_details">
+                    <h3>Weather Details</h3>
+
+                    <table>
+                        <tr>
+                            <td>Cloudy</td>
+                            <td>12%</td>
+                        </tr>
+                        <tr>
+                            <td>Humidity</td>
+                            <td>45%</td>
+                        </tr>
+                        <tr>
+                            <td>Wind</td>
+                            <td>8 km/hr</td>
+                        </tr>
+                        <tr>
+                            <td>Rain</td>
+                            <td>0mm</td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <h3>Temperature</h3>
+                    <table>
+                        <tr>
+                            <td>06:00 AM</td>
+                            <td>12°C</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td>15°C</td>
+                        </tr>
+                        <tr>
+                            <td>06:00 PM</td>
+                            <td>10°C</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 AM</td>
+                            <td>11°C</td>
+                        </tr>
+                    </table>
+                    <hr>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    {{!-- <div class="main-content">
         {{>header}}
 
-        <p>Use this site to get your weather!</p>
+        <p>Use this site to get your weather!</p> --}}
         {{!-- <div class="image">
             <img src="https://images.pexels.com/photos/2028885/pexels-photo-2028885.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="">
         </div> --}}
         
-    <form action="">
+    {{!-- <form action="">
         <input type="text" placeholder="Location">
         <button>Search</button>
     </form>
     <p id="message-1"></p>
     <p id="message-2"></p>
-        {{!-- <p>Created by {{name}}</p> --}}
+        <p>Created by {{name}}</p>
     </div>
-    {{>footer}}
+    {{>footer}}  --}}
 
     <script src="/js/app.js"></script>
 </body>
