@@ -8,7 +8,7 @@ body{
     background-position: center;
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #header{
@@ -186,13 +186,13 @@ body{
       margin: 0;
       padding: 0;
       position: static;
-      overflow: hidden;
+      overflow-x: hidden;
     }
     #header .details{
         width: 100%;
         margin: 0;
         position: static;
-        overflow: hidden;
+        overflow-x: hidden;
     }
     #header{
         width: 100%;
