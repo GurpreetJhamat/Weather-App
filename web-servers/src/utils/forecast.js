@@ -15,16 +15,18 @@ const forecast = (longitude, latitude, callback) => {
             const wind_speed = body.current.wind_speed;
             const humidity = body.current.humidity;
             const pic = body.current.weather_icons[0];
-        
+            const precip = body.current.precip;
+            const timeDate = body.location.localtime;
+            const cloudy = body.current.cloudcover;
             const jsonData = {
-                description , temp, feels, wind_speed, humidity, pic
+                description , temp, feels, wind_speed, humidity, pic, precip, timeDate, cloudy
             }
             callback(undefined, jsonData)
             // callback(undefined, `${description}. It is currently ${temp}°C. It feels like ${feels}°C out. The wind speed is ${wind_speed}km/hr and humidity is ${humidity}%`);
             console.log(body.current);
             console.log(jsonData);
-            console.log(pic)
-            console.log(typeof(pic))
+            // console.log(pic)
+            // console.log(typeof(pic))
         }
     });
 }

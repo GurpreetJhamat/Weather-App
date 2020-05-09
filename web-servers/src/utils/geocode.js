@@ -15,7 +15,10 @@ const geoCode = (address, callback) => {
                 location: body.features[0].place_name,
             });
         }
+        // console.log(body);
+        // console.log(location);
     });
 }
+
 
 module.exports = geoCode;

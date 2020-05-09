@@ -15,18 +15,15 @@
             <h3>theWeather</h3>
             <div class="weather_overview">
                 <h1 id="message-1"></h1>
-                <h3 id="message-2"></h3>
-                <img src="" alt="" id="image" width="50px" height="50px">
-
-                {{!-- <br><span>9:00am-Thursday, 7 May, 2020</span> --}}
-
-                {{!-- <p id="message-2"></p> --}}
-                
+                <div class="time">
+                    <h2 id="message-2"></h2>
+                    <h4 id="time"></h4> 
+                </div>
             </div>
         </div>
         <div class="details">
                 <div class="search_bar">
-                    <form action="" onsubmit="hello()">
+                    <form action="">
                         <input type="text" placeholder="Location">
                         <button>Search</button>
                     </form>
@@ -34,27 +31,48 @@
                 <div class="weather_details">
                     <h3>Weather Details</h3>
 
-                    <table>
+                <div class="description">
+                    <h2 id="heading"></h2>
+                    <img src="" alt="" id="image" width="50px" height="50px">
+                </div>
+
+                    {{!-- <hr> --}}
+                    <table class="table_1">
                         <tr>
-                            <td>Cloudy</td>
-                            <td>12%</td>
+                            <td><i class="fas fa-cloud"></i></td>
+                            <td>
+                                <span id="cloud"></span> 
+                                {{!-- Precipitation --}}
+                            </td>
+                            
                         </tr>
                         <tr>
-                            <td>Humidity</td>
-                            <td>45%</td>
+                            <td><i class="fas fa-cloud-rain"></i> </td>
+                            <td>
+                                <span id="precipitation"></span> 
+                                {{!-- Precipitation --}}
+                            </td>
+                            
                         </tr>
                         <tr>
-                            <td>Wind</td>
-                            <td>8 km/hr</td>
+                            <td><i class="fas fa-wind"></i></td>
+                            <td>
+                                <span id="wind"></span> 
+                            </td>
                         </tr>
                         <tr>
-                            <td>Rain</td>
-                            <td>0mm</td>
+                            <td><i class="fas fa-tint"></i></td>
+                            <td> 
+                                <span id="humidity"></span> 
+                            </td>
+                            
                         </tr>
+                        
+                        
                     </table>
                     <hr>
                     <h3>Temperature</h3>
-                    <table>
+                    <table class="table_2">
                         <tr>
                             <td>06:00 AM</td>
                             <td>12°C</td>
@@ -124,5 +142,6 @@
     {{>footer}}  --}}
 
     <script src="/js/app.js"></script>
+    <script src="https://kit.fontawesome.com/a4963748cf.js" crossorigin="anonymous"></script>
 </body>
 </html>

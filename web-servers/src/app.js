@@ -42,7 +42,7 @@ app.get('/help', (req, res) => {
 });
 
 app.get('/weather', (req, res) => {
-    console.log(req.query)
+    // console.log(req.query)
     if(!req.query.address){
         return res.send({
             error: 'You must provide a search term'
