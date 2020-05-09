@@ -12,8 +12,18 @@
 <body>
     <div id="header">
         <div class="overview">
-            <h3>theWeather</h3>
+            <div class="nav">
+                <h3>theWeather</h3>
+                <div class="search_bar">
+                    <form action="" class="form2">
+                        <input type="text" placeholder="Location" class="input1">
+                        <button>Search</button>
+                    </form>
+                </div>
+            </div>
+            {{!-- <button id="search_term">Montreal</button> --}}
             <div class="weather_overview">
+                
                 <h1 id="message-1"></h1>
                 <div class="time">
                     <h2 id="message-2"></h2>
@@ -22,12 +32,6 @@
             </div>
         </div>
         <div class="details">
-                <div class="search_bar">
-                    <form action="">
-                        <input type="text" placeholder="Location">
-                        <button>Search</button>
-                    </form>
-                </div>
                 <div class="weather_details">
                     <h3>Weather Details</h3>
 

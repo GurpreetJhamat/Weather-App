@@ -9,12 +9,17 @@ body{
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    position: relative;
 }
 
 #header{
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+.nav{
+    padding: 20px;
 }
 
 #header .overview{
@@ -88,22 +93,23 @@ body{
     /* height: auto; */
 
 
-.details .search_bar{
+.search_bar{
     /* position: absolute;
     top: 0;
     left: 0;*/
     /* position: absolute;
     top: 8px;
     left: 16px; */
-    margin: 20px 0 10px 20px;
+    margin: 40px 0 10px 20px;
 }   
 
-.details .search_bar input{
+.search_bar input{
     padding: 10px 30px 10px 5px;
+    width: 200px;
     
 }
 
-.details .search_bar button{
+.search_bar button{
     padding: 10px 25px;
     background: #333;
     border: 2px solid#333;
@@ -175,7 +181,15 @@ body{
     padding-left: 20px;
 }
 
-
+/* .search_mobile{
+    display: none;
+} */
+/* #search_term{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    padding: 10px 40px;
+} */
 @media only screen and (max-width: 800px) {
     /* body{
         background: lightcoral;
@@ -200,6 +214,38 @@ body{
         display: block;
         overflow-x: hidden;
     }
+    .weather_overview{
+        display: block;
+        position: static;
+        bottom: 0;
+        left: 0;
+        /* margin-top: 30px; */
+        /* padding: 20px; */
+        height: 100%;
+    }
+    #header .overview{
+        min-height: 100px;
+    }
+    /* .search_mobile{
+        display: block;
+    }
+    .search_desktop{
+        display: none;
+    } */
+    .details .weather_details .table_1{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .details .search_bar{
+        position: absolute;
+        top: 0;
+        right: 50%;
+        transform: translate(50%, -10%);
+    }
+    .details .weather_details h3{
+        margin-top: 60px;
+    }
   }
+
 
 

@@ -1,6 +1,8 @@
 console.log('Client side JavaScript');
 
 const weatherForm = document.querySelector('form');
+// const weatherForm2 = document.querySelector('.form2');
+// const search1 = document.querySelector('.input1');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1');
 const messageTwo = document.querySelector('#message-2')
@@ -11,13 +13,16 @@ const humidity = document.querySelector('#humidity');
 const detail = document.querySelector('#heading');
 const time = document.querySelector('#time');
 const cloud = document.querySelector('#cloud');
+// console.log(weatherForm)
+// console.log(search)
 // let weatherDescription = '';
 
 
 
 const getData = (e) => {
     e.preventDefault()
-    const location = search.value;
+    const location = search.value 
+    // const location2 = search2.value;
 
     messageOne.textContent = 'Loading....';
     messageTwo.textContent = '';
@@ -56,8 +61,9 @@ const getData = (e) => {
 })
 }
 
-const hello = () => {
-    console.log(weatherDescription);
-}
+// const hello = () => {
+//     console.log(weatherDescription);
+// }
 
 weatherForm.addEventListener('submit', getData);
+// weatherForm2.addEventListener('submit', getData);
