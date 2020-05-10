@@ -13,18 +13,24 @@
     <div id="header">
         <div class="overview">
             <div class="nav">
-                <h3>theWeather</h3>
+                <h2>Weather<span>Now</span><i class="fas fa-cloud-sun"></i></h2>
+            </div>
+            <div class="home">
+                <h1>Weather For You</h1>
+                <h4>Search a location for weather</h4>
                 <div class="search_bar">
                     <form action="" class="form2">
                         <input type="text" placeholder="Location" class="input1">
                         <button>Search</button>
                     </form>
                 </div>
-            </div>
+            </div>    
             {{!-- <button id="search_term">Montreal</button> --}}
             <div class="weather_overview">
                 
-                <h1 id="message-1"></h1>
+                <h1><span id="message-1"> Weather Will Appear Here</span>
+                {{!-- <span id="color">°C</span> --}}
+                </h1>
                 <div class="time">
                     <h2 id="message-2"></h2>
                     <h4 id="time"></h4> 
@@ -71,11 +77,18 @@
                             </td>
                             
                         </tr>
-                        
+                        <tr>
+                            <td><i class="fas fa-feather"></i></td>
+                            <td>
+                                <span id="feel"></span> 
+                                {{!-- Precipitation --}}
+                            </td>
+                            
+                        </tr>
                         
                     </table>
                     <hr>
-                    <h3>Temperature</h3>
+                    {{!-- <h3>Temperature</h3>
                     <table class="table_2">
                         <tr>
                             <td>06:00 AM</td>
@@ -94,7 +107,7 @@
                             <td>11°C</td>
                         </tr>
                     </table>
-                    <hr>
+                    <hr> --}}
                 </div>
             <!-- </div> -->
         </div>

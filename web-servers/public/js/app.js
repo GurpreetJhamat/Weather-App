@@ -13,6 +13,7 @@ const humidity = document.querySelector('#humidity');
 const detail = document.querySelector('#heading');
 const time = document.querySelector('#time');
 const cloud = document.querySelector('#cloud');
+const feel = document.querySelector('#feel');
 // console.log(weatherForm)
 // console.log(search)
 // let weatherDescription = '';
@@ -37,7 +38,13 @@ const getData = (e) => {
             messageOne.textContent = data.error;
         }    
         else{
-            messageOne.textContent = `${data.forecast.temp}°C`;
+            messageOne.textContent = `${data.forecast.temp}`;
+
+            let degree = document.createElement("span");
+            degree.id = "color"
+            degree.innerHTML = "°C"
+            messageOne.appendChild(degree)
+            messageOne.style.fontSize = "90px"
             messageTwo.textContent = data.location;
             img.src = data.forecast.pic;
             preci.textContent = `${data.forecast.precip}% Precipitation`;
@@ -46,6 +53,7 @@ const getData = (e) => {
             heading.textContent = data.forecast.description;
             time.textContent = data.forecast.timeDate;
             cloud.textContent = `${data.forecast.cloudy}% Cloudy`;
+            feel.textContent = `${data.forecast.feels}°C Feels Like`
             // console.log(data);
             // console.log(data.forecast.description)
             // console.log(img.src);
