@@ -17,6 +17,53 @@ const feel = document.querySelector('#feel');
 // console.log(weatherForm)
 // console.log(search)
 // let weatherDescription = '';
+const docBody = document.body;
+const header = document.getElementById('header')
+
+
+
+
+// let getImages = [
+
+//     {
+//         sunny: "sunny.jpg"
+//     },
+
+//     {
+//         overcast:[
+//             "overcast-day.jpg",
+//             "overcast-night"
+//         ]
+//     },
+
+//     {
+//         snow:[
+//             "snow-day",
+//             "snow-night"
+//         ]
+//     }
+    
+// ]
+
+
+// const sunnyImg = getImages[0].sunny;
+// const overcastDay = getImages[1].overcast[0];
+// const overcastNight = getImages[1].overcast[1];
+
+// // const overcastImg = getImages[1].overcast.day;
+
+// // console.log(loop);
+// console.log(overcastDay)
+
+
+
+
+// const image = `./images_weather/${overcastDay}`;
+// console.log(image)
+
+
+
+
 
 
 
@@ -61,7 +108,75 @@ const getData = (e) => {
             // console.log(data.forecast);
             // current.src = e.target.src;
         }
+
+
+
+            // let weatherDescription = data.forecast.description;
+            let weatherDescription = "Light Rain";
+            // let weatherDescription = "Light Rain Shower";
+            // let weatherDescription = "Rain, Mist";
+            // let weatherDescription = "Patchy Rain Possible";
+            console.log(weatherDescription)
+            // let isDay = data.forecast.dayNight;
+            let isDay = "yes"
+            console.log(isDay)
+
+        if(weatherDescription === "Overcast" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/overcast-day.jpg')";
+        } 
+        else if(weatherDescription === "Overcast" && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/overcast-night.jpg')";
+        } 
+        else if(weatherDescription === "Sunny" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/sunny.jpg')";
+        } 
+        else if(weatherDescription === "Snow" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/snow-day.jpg')";
+        } 
+        else if(weatherDescription === "Snow" && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/snow-night.jpg')";
+        } 
+        else if((weatherDescription === "Clouds" || "Cloudy") && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/cloudy-day.jpg')";
+        }
+        else if((weatherDescription === "Clouds" || "Cloudy") && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/cloudy-night.jpg')";
+        }
+        else if(weatherDescription === "Partly Cloudy" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/partly-cloudy-day.jpg')";
+        }
+        else if(weatherDescription === "Partly Cloudy" && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/partly-cloudy-night.jpg')";
+        }   
+        else if(weatherDescription === "Light Rain" || "Light Rain Shower" || "Rain, Mist" || "Patchy Rain Possible" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/rain-day.jpg')";
+            console.log('rain');
+        }
+        else if(weatherDescription === "Light Rain" || "Light Rain Shower" || "Rain, Mist" || "Patchy Rain Possible" && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/rain-night.jpg')";
+            console.log('rain');
+        } 
+        else if(weatherDescription === "Clear" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/clear-day.jpg')";
+        } 
+        else if(weatherDescription === "Clear" && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/clear-night.jpg')";
+        }
+        else if(weatherDescription === "Thunderstorm" || "Rain, Mist, Rain with ThunderStorm" && isDay === "yes" || isDay == "no" ){
+            docBody.style.backgroundImage = "url('../images_weather/clear-night.jpg')";
+        }
+        else if(weatherDescription === "Fog" || "Fog, Mist" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/fog.jpg')";
+        } 
+        else if(weatherDescription === "Fog" || "Fog, Mist" && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/fog-night.jpg')";
+        }
         
+        
+        else{console.log('nothing matching found')}
+
+
+         
 
 
         
