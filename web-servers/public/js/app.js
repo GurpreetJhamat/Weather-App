@@ -65,14 +65,14 @@ const getData = (e) => {
 
 
 
-            // let weatherDescription = data.forecast.description;
-            let weatherDescription = "Light Rain";
+            let weatherDescription = data.forecast.description;
+            // let weatherDescription = "Light Rain";
             // let weatherDescription = "Light Rain Shower";
             // let weatherDescription = "Rain, Mist";
             // let weatherDescription = "Patchy Rain Possible";
             console.log(weatherDescription)
-            // let isDay = data.forecast.dayNight;
-            let isDay = "yes"
+            let isDay = data.forecast.dayNight;
+            // let isDay = "yes"
             console.log(isDay)
 
         if(weatherDescription === "Overcast" && isDay === "yes"){
@@ -90,10 +90,10 @@ const getData = (e) => {
         else if(weatherDescription === "Snow" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/snow-night.jpg')";
         } 
-        else if((weatherDescription === "Clouds" || "Cloudy") && isDay === "yes"){
+        else if(weatherDescription === "Clouds" || "Cloudy" && isDay === "yes"){
             docBody.style.backgroundImage = "url('../images_weather/cloudy-day.jpg')";
         }
-        else if((weatherDescription === "Clouds" || "Cloudy") && isDay === "no"){
+        else if(weatherDescription === "Clouds" || "Cloudy" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/cloudy-night.jpg')";
         }
         else if(weatherDescription === "Partly Cloudy" && isDay === "yes"){
