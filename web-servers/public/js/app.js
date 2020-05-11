@@ -90,10 +90,10 @@ const getData = (e) => {
         else if(weatherDescription === "Snow" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/snow-night.jpg')";
         } 
-        else if(weatherDescription === "Clouds" || "Cloudy" && isDay === "yes"){
+        else if(weatherDescription === "Clouds" && isDay === "yes"){
             docBody.style.backgroundImage = "url('../images_weather/cloudy-day.jpg')";
         }
-        else if(weatherDescription === "Clouds" || "Cloudy" && isDay === "no"){
+        else if(weatherDescription === "Clouds" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/cloudy-night.jpg')";
         }
         else if(weatherDescription === "Partly Cloudy" && isDay === "yes"){
@@ -102,13 +102,11 @@ const getData = (e) => {
         else if(weatherDescription === "Partly Cloudy" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/partly-cloudy-night.jpg')";
         }   
-        else if(weatherDescription === "Light Rain" || "Light Rain Shower" || "Rain, Mist" || "Patchy Rain Possible" && isDay === "yes"){
+        else if(weatherDescription === "Light Rain" && isDay === "yes"){
             docBody.style.backgroundImage = "url('../images_weather/rain-day.jpg')";
-            console.log('rain');
         }
-        else if(weatherDescription === "Light Rain" || "Light Rain Shower" || "Rain, Mist" || "Patchy Rain Possible" && isDay === "no"){
+        else if(weatherDescription === "Light Rain" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/rain-night.jpg')";
-            console.log('rain');
         } 
         else if(weatherDescription === "Clear" && isDay === "yes"){
             docBody.style.backgroundImage = "url('../images_weather/clear-day.jpg')";
@@ -116,13 +114,19 @@ const getData = (e) => {
         else if(weatherDescription === "Clear" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/clear-night.jpg')";
         }
-        else if(weatherDescription === "Thunderstorm" || "Rain, Mist, Rain with ThunderStorm" && isDay === "yes" || isDay == "no" ){
+        else if(weatherDescription === "Thunderstorm" && isDay === "yes" || isDay == "no" ){
             docBody.style.backgroundImage = "url('../images_weather/clear-night.jpg')";
         }
-        else if(weatherDescription === "Fog" || "Fog, Mist" && isDay === "yes"){
-            docBody.style.backgroundImage = "url('../images_weather/fog.jpg')";
+        else if(weatherDescription === "Fog" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/fog-day.jpg')";
         } 
-        else if(weatherDescription === "Fog" || "Fog, Mist" && isDay === "no"){
+        else if(weatherDescription === "Fog" && isDay === "no"){
+            docBody.style.backgroundImage = "url('../images_weather/fog-night.jpg')";
+        }
+        else if(weatherDescription === "Haze" && isDay === "yes"){
+            docBody.style.backgroundImage = "url('../images_weather/fog-day.jpg')";
+        } 
+        else if(weatherDescription === "Haze" && isDay === "no"){
             docBody.style.backgroundImage = "url('../images_weather/fog-night.jpg')";
         }
         
