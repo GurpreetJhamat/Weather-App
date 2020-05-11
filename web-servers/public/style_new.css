@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     color: #f3f3f3;
-    background: url('./sky.jpg');
+    background-image: url('./sky.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -274,6 +274,9 @@ body{
     }
     .home{
         height: 50vh;
+    }
+    .details .weather_details{
+        height: auto;
     }
   }
 
