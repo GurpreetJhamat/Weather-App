@@ -21,52 +21,6 @@ const docBody = document.body;
 const header = document.getElementById('header')
 
 
-
-
-// let getImages = [
-
-//     {
-//         sunny: "sunny.jpg"
-//     },
-
-//     {
-//         overcast:[
-//             "overcast-day.jpg",
-//             "overcast-night"
-//         ]
-//     },
-
-//     {
-//         snow:[
-//             "snow-day",
-//             "snow-night"
-//         ]
-//     }
-    
-// ]
-
-
-// const sunnyImg = getImages[0].sunny;
-// const overcastDay = getImages[1].overcast[0];
-// const overcastNight = getImages[1].overcast[1];
-
-// // const overcastImg = getImages[1].overcast.day;
-
-// // console.log(loop);
-// console.log(overcastDay)
-
-
-
-
-// const image = `./images_weather/${overcastDay}`;
-// console.log(image)
-
-
-
-
-
-
-
 const getData = (e) => {
     e.preventDefault()
     const location = search.value 
