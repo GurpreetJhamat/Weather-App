@@ -14,9 +14,7 @@ const detail = document.querySelector('#heading');
 const time = document.querySelector('#time');
 const cloud = document.querySelector('#cloud');
 const feel = document.querySelector('#feel');
-// console.log(weatherForm)
-// console.log(search)
-// let weatherDescription = '';
+
 const docBody = document.body;
 const header = document.getElementById('header')
 
@@ -57,10 +55,10 @@ const getData = (e) => {
             time.textContent = data.forecast.timeDate;
             cloud.textContent = `${data.forecast.cloudy}% Cloudy`;
             feel.textContent = `${data.forecast.feels}°C Feels Like`
-        }
+        
 
-        let weatherDescription = data.forecast.description;
-        // let weatherDescription = "Blizzard";
+        // let weatherDescription = data.forecast.description;
+        let weatherDescription = "Haze";
         let isDay = data.forecast.dayNight;
         // let isDay = "yes";
         // console.log(isDay)
@@ -203,7 +201,7 @@ let fogKeyWords = ["Fog", "Mist", "Fog,", "Mist," ]
         
         // else{console.log('nothing matching found')}
 
-
+    }
                  
     })
 })
