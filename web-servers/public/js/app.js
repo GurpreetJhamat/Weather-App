@@ -57,8 +57,8 @@ const getData = (e) => {
             feel.textContent = `${data.forecast.feels}°C Feels Like`
         
 
-        // let weatherDescription = data.forecast.description;
-        let weatherDescription = "Haze";
+        let weatherDescription = data.forecast.description;
+        // let weatherDescription = "Haze";
         let isDay = data.forecast.dayNight;
         // let isDay = "yes";
         // console.log(isDay)
