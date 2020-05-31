@@ -27,19 +27,19 @@ app.get('', (req, res) => {
     });
 });
 
-app.get('/about', (req, res) => {
-    res.render('about', {
-        title: 'About',
-        name: 'Gurpreet',
-    });
-});
+// app.get('/about', (req, res) => {
+//     res.render('about', {
+//         title: 'About',
+//         name: 'Gurpreet',
+//     });
+// });
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: 'Help',
-        message: 'This is an example message!',
-    });
-});
+// app.get('/help', (req, res) => {
+//     res.render('help', {
+//         title: 'Help',
+//         message: 'This is an example message!',
+//     });
+// });
 
 app.get('/weather', (req, res) => {
     // console.log(req.query)
@@ -78,24 +78,24 @@ app.get('/weather', (req, res) => {
 });
 
 
-app.get('/products', (req, res) => {
-    if(!req.query.search){
-        return res.send({
-            error: 'You must provide a search term', 
-        })
-    }
-    console.log(req.query.search);
-    res.send({
-        products: [],
-    })
-})
+// app.get('/products', (req, res) => {
+//     if(!req.query.search){
+//         return res.send({
+//             error: 'You must provide a search term', 
+//         })
+//     }
+//     console.log(req.query.search);
+//     res.send({
+//         products: [],
+//     })
+// })
 
 
 app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
-        errorMessage: 'Help article not found',
-        name: 'Gurpreet',
+        // errorMessage: 'Help article not found',
+        // name: 'Gurpreet',
     });
 });
 
@@ -103,7 +103,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
         errorMessage: 'Page not found',
-        name: 'Gurpreet',
+        // name: 'Gurpreet',
     })
 })
 

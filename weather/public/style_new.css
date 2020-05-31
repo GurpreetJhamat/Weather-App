@@ -61,7 +61,8 @@ body{
 }
 
 .time{
-    /* padding-left: 20px; */
+    padding-left: 20px;
+    width: 70%;
 }
 .time h4{
     padding: 0px 0 0 30px;
@@ -90,7 +91,8 @@ body{
 }
 .weather_overview .time h2{
     margin: 20px 0 0 30px;
-    font-size: 30px;
+    font-size: 28px;
+    text-align: left;
 }
 
 /* .weather_overview h2 span{
@@ -204,7 +206,7 @@ body{
 
 .description{
     display: flex;
-    height: 60px;
+    /* height: 60px; */
 }
 
 .description img{
@@ -213,16 +215,7 @@ body{
 #color{
     color: lightseagreen;
 }
-/* .search_mobile{
-    display: none;
-} */
-/* #search_term{
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    padding: 10px 40px;
-} */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     /* body{
         background: lightcoral;
     } */
